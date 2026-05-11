@@ -482,7 +482,8 @@ pub use self::{
     data::{
         input::*,
         output::{
-            self, CursorIcon, FullOutput, OpenUrl, PlatformOutput, UserAttentionType, WidgetInfo,
+            self, CursorIcon, CustomCursorImage, FullOutput, OpenUrl, PlatformOutput,
+            UserAttentionType, WidgetInfo,
         },
         Key, UserData,
     },

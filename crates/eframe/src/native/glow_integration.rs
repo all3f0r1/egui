@@ -632,7 +632,11 @@ impl<'app> GlowWinitRunning<'app> {
         let gl_surface = viewport.gl_surface.as_ref().unwrap();
         let egui_winit = viewport.egui_winit.as_mut().unwrap();
 
-        egui_winit.handle_platform_output(&window, platform_output);
+        egui_winit.handle_platform_output_with_event_loop(
+            &window,
+            Some(event_loop),
+            platform_output,
+        );
 
         let clipped_primitives = integration.egui_ctx.tessellate(shapes, pixels_per_point);
 
